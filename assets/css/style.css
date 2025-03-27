@@ -1,0 +1,100 @@
+:root {
+  --color-white: #fff;
+  --color-black-800: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+section {
+  padding-bottom: 90px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.bg-loop {
+  
+  & video {
+    width: 100%;
+    height: 615px;
+    object-fit: cover;
+  } 
+}
+
+.home {
+/*   background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  
+  position: relative;
+  & .container {
+ 
+    justify-content: space-between;
+
+    & .content {
+      display: flex;
+      gap: 88px;
+     
+      & #dj {
+        object-fit: contain;
+        height: 524px;
+        filter: drop-shadow(-10px 10px 10px #11111145);
+      }
+
+      & .bio {
+        width: 532.2px;
+
+        & img {
+          margin-bottom: 30px;
+        }
+
+        & p {
+          margin-bottom: 20px;
+          font-family: "Inter", sans-serif;
+        }
+      }
+    }
+
+    & .redes-socias {
+      display: flex;
+      gap: 50px;
+      justify-content: space-between;
+      margin-top: 60px;
+
+      & img {
+        width: 102px;
+        cursor: pointer;
+        transition: .3s;
+      }
+
+      & img:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(-10px 10px 10px #11111131);
+      }
+    }
+  }
+
+  & .grid1, .grid2 {
+    position: absolute;
+  }
+
+  & .grid1 {
+    top: -250px;
+    left: 0;
+    z-index: -1;
+  }
+
+  & .grid2 {
+    bottom: 0;
+    right: 0;
+  }
+}
