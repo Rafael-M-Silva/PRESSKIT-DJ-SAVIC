@@ -11,6 +11,19 @@
   list-style: none;
 }
 
+html {
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  user-select: none; /* Impede a seleção */
+  pointer-events: none; /* Impede interações como arrastar */
+}
+
 section {
   padding-bottom: 90px;
 }
@@ -26,6 +39,13 @@ section {
     width: 100%;
     height: 615px;
     object-fit: cover;
+    animation: teste 4s;
+  }
+}
+
+@keyframes teste {
+  0% {
+    height: 100vh;
   }
 }
 
@@ -71,12 +91,14 @@ section {
 
       & img {
         width: 102px;
-        cursor: pointer;
-        transition: 0.3s;
-        
       }
 
-      & img:hover {
+      & a {
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      & a:hover {
         transform: scale(1.1);
         filter: drop-shadow(-10px 10px 10px #11111131);
       }
@@ -103,7 +125,6 @@ section {
     position: absolute;
     bottom: -70px;
     left: -150px;
-   
 
     & img {
       width: 250px;
@@ -127,6 +148,7 @@ section {
     font-size: 6em;
     font-family: "Lexend Zetta", sans-serif;
     margin-bottom: 80px;
+    margin-left: -16px;
   }
 
   position: relative;
@@ -161,7 +183,97 @@ section {
         object-fit: cover;
         cursor: pointer;
         z-index: 1;
+        border-radius: 4px;
       }
     }
+  }
+}
+
+.contato {
+  position: relative;
+  overflow: hidden;
+
+  & h2 {
+    text-transform: uppercase;
+    font-size: 6em;
+    font-family: "Lexend Zetta", sans-serif;
+    margin-bottom: 80px;
+    font-weight: bolder;
+    margin-left: -16px;
+  }
+
+  & .grid1,
+  .grid2 {
+    position: absolute;
+  }
+
+  & .grid1 {
+    top: 100px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(180deg);
+  }
+
+  & .grid2 {
+    bottom: -280px;
+    right: 80px;
+    transform: rotate(180deg);
+    z-index: -2;
+  }
+
+  & .container {
+
+    & .content {
+      display: flex;
+      align-items: flex-start;
+
+      & .album {
+        width: 516px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background: var(--color-black-800);
+        align-items: center;
+        padding: 43px;
+        border-radius: 10px 0px 0px 10px;
+        position: relative;
+
+        & #disco {
+          position: absolute;
+          right: -270px;
+          top: 0;
+          z-index: -2;
+          animation: spin 7s infinite linear;
+          filter: drop-shadow(-10px 10px 10px #1111113b); 
+        }
+
+        & .redes-sociais {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          
+          & img {
+            width: 46.41px;
+          }
+
+          & a {
+            transition: .3s;
+          }
+          
+          & a:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(-10px 10px 10px #11111131);
+          }
+
+        }
+      }
+    }
+  }
+
+  & #savic-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
   }
 }
