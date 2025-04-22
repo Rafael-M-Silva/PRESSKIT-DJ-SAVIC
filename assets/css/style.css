@@ -229,6 +229,14 @@ section {
         border-radius: 10px 0px 0px 10px;
         position: relative;
 
+        & a {
+          transition: .3s;
+        }
+
+        & a:hover {
+          transform: scale(1.05);
+        }
+
         & #disco {
           position: absolute;
           right: -270px;
@@ -252,10 +260,12 @@ section {
           }
 
           & a:hover {
-            transform: scale(1.1);
+            transform: scale(1.5);
             filter: drop-shadow(-10px 10px 10px #11111131);
           }
         }
+
+        
       }
     }
   }
@@ -265,7 +275,10 @@ section {
     right: 0;
     bottom: 0;
     z-index: -1;
+  
   }
+
+  
 }
 /* Fim Contato */
 
@@ -302,6 +315,28 @@ section {
 }
 
 @media screen and (max-width: 1080px) {
+  .contato {
+    & .container {
+      & .content {
+        & .album {
+          width: 400px;
+
+          & a {
+            width: 100%;
+
+            & img {
+              width: 100%;
+            }
+          }
+
+          & #disco {
+            width: 425px;
+            right: -215px;
+          }
+        }
+      }
+    }
+  }
   .bg-loop {
     & video {
       height: 450px;
@@ -353,8 +388,11 @@ section {
     }
 
     & .videos {
+      flex-direction: column;
+      align-items: center;
 
       & img {
+        width: 100%;
         height: auto;
       }
     }
@@ -362,13 +400,36 @@ section {
  }
 }
 
+@media screen and (max-width: 800px) {
+  .contato {
+   & #savic-img {
+    width: 300px;
+   }
+
+   & .container {
+    padding-top: 10px;
+   }
+  }
+}
+
 @media screen and (max-width: 700px) {
+  section {
+    padding: 30px 2%;
+  }
   .home {
+    padding-top:0 ;
+    
     & .container {
       & .content {
+        & #dj {
+          width: 70%;
+          height: 400px;
+        }
+
         & .bio {
           & img {
-            width: 100%;
+            margin-top: 30px;
+            width: 80%;
           }
         }
       }
@@ -380,6 +441,19 @@ section {
       }
     }
   }
+
+  .contato {
+    & #savic-img {
+     display: none;
+    }
+
+    & .container {
+
+      & .grid2 {
+        right: 0;
+      }
+    }
+   }
 
   .midia-kit {
 
@@ -393,4 +467,45 @@ section {
 
     }
    }
+}
+
+@media screen and (max-width: 650px) {
+  .contato {
+  padding: 10px;
+ 
+    & .container {
+
+      & h2 {
+        font-size: 4em;
+        margin-bottom: 40px;
+      }
+
+      & .content {
+        padding-bottom: 250px;
+       & .album {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+
+        & #disco {
+          width: 100.5%;
+          top: 240px;
+          left: 0;
+        }
+       }
+      }
+    }}
+}
+
+@media screen and (max-width: 550px) {
+  .home {
+  
+    & .container {
+
+      & .redes-socias {
+        margin-top: 10px;
+        & img {
+          width: 40px;
+        }
+      }
+    }}
 }
