@@ -21,8 +21,10 @@ html {
 }
 
 img {
-  user-select: none; /* Impede a seleção */
-  pointer-events: none; /* Impede interações como arrastar */
+  user-select: none;
+  /* Impede a seleção */
+  pointer-events: none;
+  /* Impede interações como arrastar */
 }
 
 section {
@@ -34,6 +36,7 @@ section {
   margin: auto;
   padding-top: 60px;
 }
+
 /* Fim Global */
 
 .bg-loop {
@@ -48,6 +51,7 @@ section {
 /* Inicio Home */
 .home {
   position: relative;
+
   & .container {
     justify-content: space-between;
 
@@ -126,6 +130,7 @@ section {
     }
   }
 }
+
 /* Fim Home */
 
 /* Inicio Midia-kit */
@@ -142,7 +147,9 @@ section {
   }
 
   position: relative;
+
   & .container {
+
     & .grid1,
     .grid2 {
       position: absolute;
@@ -167,8 +174,8 @@ section {
       display: flex;
       gap: 30px;
 
-      & img {
-        width: calc(50% - 15px);
+      & video {
+        width: calc(33% - 15px);
         height: 551px;
         object-fit: cover;
         cursor: pointer;
@@ -178,6 +185,7 @@ section {
     }
   }
 }
+
 /* Fim Midia-kit */
 
 /* Inicio Contato */
@@ -238,6 +246,7 @@ section {
         }
 
         & #disco {
+          width: 523px;
           position: absolute;
           right: -270px;
           top: 0;
@@ -256,6 +265,7 @@ section {
           }
 
           & a {
+            width: 46.41px;
             transition: 0.3s;
           }
 
@@ -265,7 +275,7 @@ section {
           }
         }
 
-        
+
       }
     }
   }
@@ -275,11 +285,12 @@ section {
     right: 0;
     bottom: 0;
     z-index: -1;
-  
+
   }
 
-  
+
 }
+
 /* Fim Contato */
 
 /* Inicio Efeitos */
@@ -294,6 +305,7 @@ section {
     height: 100vh;
   }
 }
+
 /* Fim Efeitos */
 
 /* Inicio Responsivo */
@@ -337,6 +349,7 @@ section {
       }
     }
   }
+
   .bg-loop {
     & video {
       height: 450px;
@@ -346,6 +359,7 @@ section {
   .home {
     & .container {
       padding-top: 0;
+
       & .content {
         flex-direction: column;
         gap: 0px;
@@ -378,37 +392,39 @@ section {
   html {
     font-size: 90%;
   }
- .midia-kit {
 
-  & .container {
+  .midia-kit {
 
-    & h2 {
-       font-size: 5em;
-       margin-left: -12px;
-    }
+    & .container {
 
-    & .videos {
-      flex-direction: column;
-      align-items: center;
+      & h2 {
+        font-size: 5em;
+        margin-left: -12px;
+      }
 
-      & img {
-        width: 100%;
-        height: auto;
+      & .videos {
+        flex-direction: column;
+        align-items: center;
+
+        & video {
+          width: 100%;
+          height: 500px;
+          object-fit: contain;
+        }
       }
     }
   }
- }
 }
 
 @media screen and (max-width: 800px) {
   .contato {
-   & #savic-img {
-    width: 300px;
-   }
+    & #savic-img {
+      width: 300px;
+    }
 
-   & .container {
-    padding-top: 10px;
-   }
+    & .container {
+      padding-top: 10px;
+    }
   }
 }
 
@@ -416,9 +432,10 @@ section {
   section {
     padding: 30px 2%;
   }
+
   .home {
-    padding-top:0 ;
-    
+    padding-top: 0;
+
     & .container {
       & .content {
         & #dj {
@@ -434,6 +451,10 @@ section {
         }
       }
 
+      & .grid1 img {
+        width: 300px;
+      }
+
       & .redes-socias {
         & img {
           width: 70px;
@@ -444,7 +465,7 @@ section {
 
   .contato {
     & #savic-img {
-     display: none;
+      display: none;
     }
 
     & .container {
@@ -453,26 +474,26 @@ section {
         right: 0;
       }
     }
-   }
+  }
 
   .midia-kit {
 
     & .container {
-  
+
       & h2 {
-         font-size: 4em;
-         margin-left: -10px;
-         margin-bottom: 40px;
+        font-size: 4em;
+        margin-left: -10px;
+        margin-bottom: 40px;
       }
 
     }
-   }
+  }
 }
 
 @media screen and (max-width: 650px) {
   .contato {
-  padding: 10px;
- 
+    padding: 10px;
+
     & .container {
 
       & h2 {
@@ -482,30 +503,105 @@ section {
 
       & .content {
         padding-bottom: 250px;
-       & .album {
-        width: 100%;
-        border-radius: 10px 10px 0 0;
 
-        & #disco {
-          width: 100.5%;
-          top: 240px;
-          left: 0;
+        & .album {
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+
+          & #disco {
+            width: 100.5%;
+            top: 240px;
+            left: 0;
+          }
         }
-       }
       }
-    }}
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {
   .home {
-  
+    padding-right: 0;
+
     & .container {
 
       & .redes-socias {
         margin-top: 10px;
+
         & img {
           width: 40px;
         }
       }
-    }}
+
+    }
+  }
+
+  .contato {
+
+
+    & .container {
+
+      & h2 {
+        font-size: 3em;
+        margin-left: 1px;
+      }
+
+      & .content {
+
+        & .album {
+          padding: 20px;
+        }
+      }
+
+
+    }
+  }
+
+  .midia-kit {
+
+    & .container h2 {
+      font-size: 3em;
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .home {
+    padding-right: 0;
+
+    & .container {
+
+      & .redes-socias {
+        margin-top: 10px;
+
+        & img {
+          width: 40px;
+        }
+      }
+
+    }
+  }
+
+  .contato {
+
+
+    & .container {
+
+
+
+      & .content {
+
+        & .album {
+
+
+          & #disco {
+            top: 200px;
+          }
+        }
+      }
+
+
+    }
+  }
 }
