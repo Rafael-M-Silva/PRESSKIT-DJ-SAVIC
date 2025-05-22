@@ -21,7 +21,7 @@ ScrollReveal().reveal(".contato h2", {
   delay: 1,
   reset: false,
 });
-ScrollReveal().reveal(".content", {
+ScrollReveal().reveal("#contato", {
   origin: "bottom",
   distance: "200px",
   duration: 1000,
