@@ -31,6 +31,36 @@ section {
   padding-bottom: 90px;
 }
 
+#dj {
+  animation: animate-on 1s ease-in-out forwards;
+}
+
+#logo {
+  animation: animate-logo 1s ease-in-out forwards;
+}
+
+@keyframes animate-logo {
+    0% {
+    transform: translate(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-on {
+    0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .container {
   max-width: 1180px;
   margin: auto;
