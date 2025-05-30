@@ -74,7 +74,7 @@ section {
   height: 100vh;
   object-fit: cover;
   animation: teste 4s;
-  background-image: url(../video/loop-bg.gif);
+  background-image: url("../video/loop-bg.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
