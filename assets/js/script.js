@@ -37,6 +37,14 @@ ScrollReveal().reveal("#contato", {
   reset: false,
 });
 
+ScrollReveal().reveal(".content iframe", {
+  origin: "bottom",
+  distance: "200px",
+  duration: 1000,
+  delay: 1,
+  reset: false,
+});
+
 ScrollReveal().reveal(".midia-kit .videos video:nth-child(1)", {
   origin: "left",
   distance: "200px",
