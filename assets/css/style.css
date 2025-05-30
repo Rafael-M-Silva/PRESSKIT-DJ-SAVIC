@@ -570,6 +570,9 @@ section {
 }
 
 @media screen and (max-width: 550px) {
+   .bg-loop::after {
+  bottom: 0;
+}
   .home {
     padding-right: 0;
 
